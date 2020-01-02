@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang=ko>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>예시 블로그</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      /* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .display-4 {
+      font-size: 3rem;
+    }
+  }
+  
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+  }
+  
+  .card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  /* Blog posts */
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+  
+  /* Footer */
+  .blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+  
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="http://tjrrms0809.dothome.co.kr/profile">개발중인 사이트 가기</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#">안석근 임시 프로필 홈페이지</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="text-muted" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="./login.html">관리자페이지</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="#">프로필</a>
+      <a class="p-2 text-muted" href="#">사진</a>
+      <a class="p-2 text-muted" href="#">가족사진</a>
+      <a class="p-2 text-muted" href="#">개발된</a>
+      <a class="p-2 text-muted" href="#">개발중</a>
+    </nav>
+  </div>
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">안녕하세요 반갑습니다</h1>
+      <p class="lead my-3">이 홈페이지 임시페이지이며 왼쪽 상단 개발중인 사이트에서 확인할수 있습니다.</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">더 자세한 내용...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">여행</strong>
+          <h3 class="mb-0">최근 여행지</h3>
+          <div class="mb-1 text-muted">00월 00일 부터</div>
+          <p class="card-text mb-auto">이번에 여행은</p>
+          <a href="#" class="stretched-link">...</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">앱</strong>
+          <h3 class="mb-0">개발중</h3>
+          <div class="mb-1 text-muted">00월 00일 부터</div>
+          <p class="mb-auto">이번에 개발중인</p>
+          <a href="#" class="stretched-link">...</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        최근 게시물
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">미국 라스베가스</h2>
+        <p class="blog-post-meta">1월<a href="#">라스베가스에서</a></p>
+
+        <p>9박 11일 동안 다녀온 서부 여행</p>
+        <hr>
+        <p>여기가 바로 <a href="www.airport.kr/">인천공항</a>, 이젠 어느정도 익숙해질 때도 됬느데 항상 새롭다</p>
+        <blockquote>
+          <p>우리가 중점으로 가는곳은 <strong>그랜드 캐년</strong> 영국 BBC선정 죽기전에 꼭 가봐야 할 여행지 TOP10 중에 당당히 1위인 그곳이다</p>
+        </blockquote>
+        <p>사실난 <em>Las vegas</em><strong> 라스베가스 카지노가 더 궁금하기는 하다</strong> 올인 드라마르 매니아라서 그런지....</p>
+        <h2>첫날</h2>
+        <p>비행기에서만 있었다</p>
+        <h2>두번째날</h2>
+        <p>사실 자유여행을 하고 싶었지만 요번에는 페키지 여행이 더 싸게 나왔다(내 퇴직금ㅠㅠ)</p>
+        <pre><code>노랑풍선 가이드님과의 만남</code></pre>
+        <p>일단 말을 센스있게 하시고 목소리가 좋아서 합격</p>
+        <h3>세번째날</h3>
+        <p>금문교 골든 게이트 브릿지</p>
+        <ul>
+          <li>맛집 탐험</li>
+          <li>외국인 구경</li>
+          <li>외국 건물 구경</li>
+        </ul>
+        <p>외국여행중 중요한 3가지는</p>
+        <ol>
+          <li>여권</li>
+          <li>여권</li>
+          <li>여권</li>
+        </ol>
+        <p>숙소에 금고에 여권을 두고 다음 장소를 가서 택시비가 6만원이 나왔다 물론 밥도 잘 먹지 못했고 무었보다 같이간 여행 20명의 패밀리에게 30분에 시간을 낭비한게 제일 죄송했다. </p>
+        <a href="#" class="stretched-link">...</a>
+      </div>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">개발중</h2>
+        <p class="blog-post-meta">2020  <a href="#">대기자 어플</a></p>
+
+        <p>요즘 맛집에 대기자가 생긴다 그걸 관리해주는 편리</p>
+        <ul>
+          <li>대기자 작성</li>
+          <li>대기자 인원</li>
+          <li>대기 예상 시간</li>
+          <li>다음 대기자에게 자동 문자</li>
+        </ul>
+        <p>대기할래 <em>I want degi </em>방금 지은 대기자 어플 이름이다.</p>
+        <p>개발은 1월 중순에 시작할 예정으로 </p><a href="#" class="stretched-link">...</a>
+      </div>
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">이전</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">관리</a>
+      </nav>
+
+    </div>
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">오늘 찾아온 손님</h4>
+        <p class="mb-0">...<em>...</em>안석근 프로필 홈페이지에 찾아와주셔서 정말 감사합니다 <strong>^-^</strong></p>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">년도별 여행 & 개발</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">2014</a></li>
+          <li><a href="#">2015</a></li>
+          <li><a href="#">2016</a></li>
+          <li><a href="#">2017</a></li>
+          <li><a href="#">2018</a></li>
+          <li><a href="#">2019</a></li>
+          <li><a href="#">2020</a></li>
+        </ol>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">다른곳으로</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/">깃 허브</a></li>
+          <li><a href="https://twitter.com/">트위터</a></li>
+          <li><a href="https://www.facebook.com/">페이스북</a></li>
+        </ol>
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p> 블로그 예시 <a href="https://getbootstrap.com/">자료 참조</a> by <a href="https://twitter.com/mdo">자료 참고</a>.</p>
+  <p>
+    <a href="#">맨 위로</a>
+  </p>
+</footer>
+</body>
+</html>
