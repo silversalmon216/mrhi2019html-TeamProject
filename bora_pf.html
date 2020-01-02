@@ -1,105 +1,205 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
-    <title>Bootstrap Tamplate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+  <title>Bootstrap Tamplate</title>
 
-    <!-- 부트스트랩 라이브러리 추가 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- 부트스트랩 라이브러리 추가 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <style>
-        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-        body {
-            padding: 0px;
-            margin: 0px 0px;
-            background-color: whitesmoke;
-            font-family: '나눔고딕', 'Nanum Gothic';
-            font-size: 1.5rem;
-            display: grid;
-        }
+    body {
+      background-color: whitesmoke;
+      font-family: '나눔고딕', 'Nanum Gothic';
+      font-size: 1.0rem;
+      display: grid;
+    }
 
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style: none
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      margin: 0 auto;
+      width: 1200px;
+      height: 300px;
+      position: relative;
+      left: auto;
+      right: auto;
+      color: white;
+    }
+
+    nav {
+      width: 1200px;
+      height: 50px;
+      position: absolute;
+      top: auto;
+      right: auto;
+      left: auto;
+    }
+
+    nav>ul {
+      overflow: hidden;
+    }
+
+    nav>ul>li {
+      float: left;
+      width: 270px;
+      text-align: center;
+    }
+
+    nav>ul>li>a {
+      display: inline-block;
+      padding: 12px 0px;
+      width: 100%;
+      color: black;
+      font-weight: bold;
+      background: yellowgreen;
+    }
+
+    nav>ul>li:hover>a {
+      color: cornsilk;
+      background: blueviolet;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      z-index: 99;
+      text-align: center;
+      background: #f1f1f1;
+    }
+
+    .submenu>li>a {
+      display: inline-block;
+      padding: 14px 0px;
+      color: black;
+      width: 270px;
+      font-size: 15px;
+    }
+
+    .submenu>li>a:hover {
+      background: #ccc;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- 1. Header 영역 -->
-    <header class="jumbotron text-center bg-info mb-0">
-        <img src="http://www.2intelli.com/images/clients/Android-Developer.png" alt="">
-    </header>
+  <!-- 1. Header 영역 -->
+  <header class="jumbotron text-center bg-info mb-0">
+    <img src="./androidch.png" alt="">
+    <h1></h1>
+    <p></p>
+  </header>
 
-    <!-- 2. Nav 영역 -->
-    <!-- navbar-expand-sm: 반응형 웹을 위한 속성 -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container">
-            <!-- 2-1. Logo 글씨 or Image -->
-            <a href="#" class="navbar-brand"><img src="./main_icon.png" alt="" width="30px"></a>
-            <!-- 2-2. 모바일 화면일 때는 오른쪽 끝에 햄버거 아이콘 모양의 메뉴로 네비게이션이 변경되는 것 -->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
-            <!-- 2-3. 네비 메뉴 -->
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
-                 </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- 2. Nav 영역 -->
 
-    <!-- 3. 콘텐츠 영역 -->
-    <div class="container mt-4">
-        <div class="row">
-            <aside class="col-sm-4">
-                <h2>My Information</h2>
-                <p>Profile image:</p>
-                <img src="https://image.flaticon.com/icons/png/512/145/145852.png" style="width: 80%;" class="rounded" enabled>
-                <p>Some text about me.</p>
+  <!-- navbar-expand-sm: 반응형 웹을 위한 속성 -->
+  <nav class="navbar navbar-expand-sm mb-0 container">
+    <!-- 2-2. 모바일 화면일 때는 오른쪽 끝에 햄버거 아이콘 모양의 메뉴로 네비게이션이 변경되는 것 -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span
+        class="navbar-toggler-icon"></span></button>
+    <!-- 2-3. 네비 메뉴 -->
+    <ul>
+      <li>
+        <a href="#">홈</a>
+        <ul class="submenu">
+          <li><a href="./bora_profile.html" target="_blank">배운 과정</a></li>
+        </ul>
+      </li>
+      <li><a href="#">언어/개발도구</a>
+        <ul class="submenu">
+          <li><a href="./bora_lng.html">언어</a></li>
+          <hr>
+          <li><a href="./bora_lng.html">개발도구</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">프로젝트</a>
+        <ul class="submenu">
+          <li><a href="./bora_pj.html">개인 프로젝트</a></li>
+          <hr>
+          <li><a href="./bora_pj.html">팀 프로젝트</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">SNS</a>
+        <ul class="submenu">
+          <li><a href="https://open.kakao.com/o/sqhJLmJb" target="_blank">카카오톡</a></li>
+          <hr>
+          <li><a href="https://www.instagram.com/kookbrew1/" target="_blank">인스타그램</a></li>
+          <hr>
+          <li><a href="email" target="_blank">이메일</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-                <h5>Some Links</h5>
-                <p>My portfolio</p>
-                <ul class="list-group">
-                    portfolio
-                    <h5>search</h5>
-                    <input type="text" size="10" placeholder="검색">
-                    <input type="submit" value="검색">
-                    <li class="list-group-item list-group-item-action"><a href="#">Link1</a></li class="list-group-item list-group-item-action">
-                    <li class="list-group-item list-group-item-action"><a href="#">Link2</a></li class="list-group-item list-group-item-action">
-                    <li class="list-group-item list-group-item-action"><a href="#">Link3</a></li class="list-group-item list-group-item-action">
-                </ul>
-            </aside>
+  <!-- 3. 콘텐츠 영역 -->
+  <div class="container mt-4">
+    <div class="row">
+      <aside class="col-sm-4">
+        <h2>My Information</h2>
+        <p>Profile image:</p>
+        <img src="https://image.flaticon.com/icons/png/512/145/145852.png" style="width: 80%;" class="rounded" enabled>
+        <p>Some text about me.</p>
+        <hr>
 
-            <article class="col-sm-8">
-                생일: 1992.12.31<br>
-                주소: Ansan, Republic of Korea<br>
-                Android Developer<br>
-    
-                번호: 010.9......<br>
-                <a href="ajkdhf21j@naver.com">ajkdhf21j@naver.com</a><br>
-                sns: instagram <br>
-                주소: <br>
+        <ul class="list-group">
+          <h5>search</h5>
+          <input type="text" size="5" placeholder="검색">
+          <input type="submit" value="검색" class="btn btn-outline-primary mt-2">
+        </ul>
+      </aside>
 
-                <h2>Second Article Title</h2>
-                <h5>This is second article</h5>
-                <img src="./imgs/03.jpg" style="max-width: 100%;" class="rounded">
-                <p>Some text....</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deleniti quae aut officia laudantium, explicabo beatae vitae animi, eius quibusdam doloribus dolorum, mollitia deserunt recusandae veniam. Ut fugiat nemo nostrum?</p>
-                <br>
+      <article class="col-sm-8">
+        생일: 1992.12.31<br>
+        주소: Ansan, Republic of Korea<br>
+        Android Developer<br><br>
 
-            </article>
+        이메일: <a href="email">ajkdhf21j@naver.com</a><br>
+        sns: instagram <br>
+        <hr>
 
-        </div>
+      </article>
 
     </div>
-    <!-- 4. footer -->
-    <footer class="jumbotron text-center">
-        <h4>Footer</h4>
-        <p>Copyright &copy; 2019 Designed by mrhi android class</p>
-    </footer>
+
+  </div>
+  <!-- 4. footer -->
+  <footer class="jumbotron text-center">
+    <h4>Footer</h4>
+    <p>Copyright &copy; 2019 Designed by mrhi android class</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $("nav > ul > li").mouseenter(function () {
+      $(this).children(".submenu").stop().slideDown(400);
+    });
+    $("nav > ul > li").mouseleave(function () {
+      $(this).children(".submenu").stop().slideUp(100);
+    });
+  </script>
 
 </body>
+
 </html>
